@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Upload d'objet</title>
+    <style>
+      body { font-family: sans-serif; text-align: center; padding: 2rem; }
+      input, button { margin: 1rem; padding: 1rem; font-size: 1rem; }
+    </style>
+  </head>
+  <body>
+    <h1>📷 Envoie ton objet</h1>
+    <p>Prends 5-10 photos de l'objet sous différents angles.</p>
+    <input type="file" id="photos" accept="image/*" multiple capture="environment" />
+    <br />
+    <button onclick="envoyer()">Envoyer</button>
+
+    <script>
+      function envoyer() {
+        const fichiers = document.getElementById("photos").files;
+        if (fichiers.length === 0) {
+          alert("Ajoute des photos avant d’envoyer !");
+          return;
+        }
+
+        alert("(Dans la vraie app, on enverrait les photos à une IA ici)");
+        // Étape suivante : connecter à une API de scan 3D !
+      }
+    </script>
+  </body>
+</html>
 
